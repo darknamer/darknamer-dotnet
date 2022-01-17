@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Darknamer.Core.Interfaces.Base;
 
-namespace Darknamer.Core.Interfaces.Base
+public interface IDbBaseService<T>
 {
-    internal interface IDbBaseService
-    {
-    }
+    IEnumerable<T> All();
+    T? Insert(string username, T model);
+    T? Update(string username, T model);
+    void Delete(string username, T model);
 }
